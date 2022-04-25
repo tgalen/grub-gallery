@@ -15,6 +15,7 @@ const CardContainer = ({ isEnglish }) => {
       {FOOD_ITEMS.map((item) => {
         return (
           <Card
+            key={item.name.english}
             img={item.image}
             name={isEnglish ? item.name.english : item.name.spanish}
             price={isEnglish ? item.price.english : item.price.spanish}

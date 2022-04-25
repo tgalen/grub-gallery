@@ -7,6 +7,7 @@ const CARD_STYLE = {
   overflow: "hidden",
   borderRadius: "15px",
   margin: "0.5%",
+  borderStyle: "solid",
 };
 
 const IMG_STYLE = {
@@ -21,7 +22,8 @@ const CARD_OVERLAY = {
   right: "0",
   zIndex: "1",
   borderRadius: "15px",
-  backgroundColor: "pink",
+  backgroundColor: "mintCream",
+  // maxHeight: "100px",
 };
 
 const Card = ({ img, name, price, type }) => {
@@ -31,7 +33,9 @@ const Card = ({ img, name, price, type }) => {
       <div style={CARD_OVERLAY}>
         <h3>{name}</h3>
         <h5>{price}</h5>
-        <h7>{type}</h7>
+        {type.map((descirption) => {
+          return <p>{descirption}</p>;
+        })}
       </div>
     </li>
   );
