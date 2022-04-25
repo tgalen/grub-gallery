@@ -35,15 +35,21 @@ const Body = () => {
 
   // handle filter buttons
   const handleMeatFilter = () => {
-    setTypeFilter(FILTER_TYPE.MEAT);
+    typeFilter === FILTER_TYPE.MEAT
+      ? setTypeFilter(FILTER_TYPE.ALL)
+      : setTypeFilter(FILTER_TYPE.MEAT);
   };
 
   const handleFishFilter = () => {
-    setTypeFilter(FILTER_TYPE.FISH);
+    typeFilter === FILTER_TYPE.FISH
+      ? setTypeFilter(FILTER_TYPE.ALL)
+      : setTypeFilter(FILTER_TYPE.FISH);
   };
 
   const handleVegetarianFilter = () => {
-    setTypeFilter(FILTER_TYPE.VEGETARIAN);
+    typeFilter === FILTER_TYPE.VEGETARIAN
+      ? setTypeFilter(FILTER_TYPE.ALL)
+      : setTypeFilter(FILTER_TYPE.VEGETARIAN);
   };
 
   // filter the complete list of food per filter buttons
