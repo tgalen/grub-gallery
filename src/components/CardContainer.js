@@ -1,4 +1,4 @@
-import IMAGES from "../assets";
+import FOOD_ITEMS from "../constants";
 import Card from "./Card";
 
 const UL_STYLE = {
@@ -10,27 +10,6 @@ const UL_STYLE = {
 };
 
 const CardContainer = ({ isEnglish }) => {
-  const FOOD_ITEMS = [
-    {
-      name: { english: "Chicken Parmagiana", spanish: "Pollo Parmesano" },
-      price: { english: "$20", spanish: "400" },
-      type: { english: "White Meat, Chicken", spanish: "Carne, Pollo" },
-      image: IMAGES.chickenParm,
-    },
-    {
-      name: { english: "Chicken Marsala", spanish: "Pollo Marsalla" },
-      price: { english: "$20", spanish: "400" },
-      type: { english: "White Meat, Chicken", spanish: "Carne, Pollo" },
-      image: IMAGES.chickenMarsala,
-    },
-    {
-      name: { english: "Filet Mignon", spanish: "Filete Mignon" },
-      price: { english: "$40", spanish: "800" },
-      type: { english: "Red Meat, Beef", spanish: "Carne Rojo, Carne de Vaca" },
-      image: IMAGES.filetMignon,
-    },
-  ];
-
   return (
     <ul style={UL_STYLE}>
       {FOOD_ITEMS.map((item) => {
