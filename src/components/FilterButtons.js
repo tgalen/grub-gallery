@@ -10,11 +10,8 @@ const FILTER_BTN = {
 const FilterButtons = () => {
   return (
     <div>
-      <button style={FILTER_BTN}>White Meat</button>
-      <button style={FILTER_BTN}>Red Meat</button>
+      <button style={FILTER_BTN}>Meat</button>
       <button style={FILTER_BTN}>Fish</button>
-      <button style={FILTER_BTN}>Seafood</button>
-      <button style={FILTER_BTN}>Shell Fish</button>
       <button style={FILTER_BTN}>Vegetarian</button>
     </div>
   );
