@@ -1,6 +1,13 @@
 import IMAGES from "./assets";
 
-const FOOD_ITEMS = [
+export const FILTER_TYPE = {
+  ALL: "all",
+  MEAT: "Meat",
+  FISH: "Fish",
+  VEGETARIAN: "Vegetarian",
+};
+
+export const FOOD_ITEMS = [
   {
     name: { english: "Chicken Parmagiana", spanish: "Pollo Parmesano" },
     price: { english: "$20", spanish: "400" },
@@ -68,5 +75,3 @@ const FOOD_ITEMS = [
     image: IMAGES.veggieBurger,
   },
 ];
-
-export default FOOD_ITEMS;

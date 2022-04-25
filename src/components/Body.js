@@ -3,6 +3,7 @@ import SearchBar from "./SearchBar";
 import FilterButtons from "./FilterButtons";
 import CardContainer from "./CardContainer";
 import LanguageToggle from "./LanguageToggle";
+import { FILTER_TYPE, FOOD_ITEMS } from "../constants";
 
 const LANGUAGE_BTN_WRAPPER = {
   margin: "auto",
@@ -21,11 +22,37 @@ const FILTER_BTNS_WRAPPER = {
 };
 
 const Body = () => {
+  // language toggle
   const [isEnglish, setEnglish] = useState(true);
 
+  // filter state
+  const [typeFilter, setTypeFilter] = useState(FILTER_TYPE.ALL);
+
+  // language toggle function
   const handleLanguageToggle = () => {
     setEnglish(!isEnglish);
   };
+
+  // handle filter buttons
+  const handleMeatFilter = () => {
+    setTypeFilter(FILTER_TYPE.MEAT);
+  };
+
+  const handleFishFilter = () => {
+    setTypeFilter(FILTER_TYPE.FISH);
+  };
+
+  const handleVegetarianFilter = () => {
+    setTypeFilter(FILTER_TYPE.VEGETARIAN);
+  };
+
+  // filter the complete list of food per filter buttons
+  const FILTERED_FOOD_LIST = FOOD_ITEMS.filter((item) => {
+    if (typeFilter === "all") {
+      return item;
+    }
+    if (item.type.english[0].includes(typeFilter)) return item;
+  });
 
   return (
     <div>
@@ -39,9 +66,17 @@ const Body = () => {
         <SearchBar />
       </div>
       <div style={FILTER_BTNS_WRAPPER}>
-        <FilterButtons />
+        <FilterButtons
+          isEnglish={isEnglish}
+          handleMeatFilter={handleMeatFilter}
+          handleFishFilter={handleFishFilter}
+          handleVegetarianFilter={handleVegetarianFilter}
+        />
       </div>
-      <CardContainer isEnglish={isEnglish} />
+      <CardContainer
+        isEnglish={isEnglish}
+        FILTERED_FOOD_LIST={FILTERED_FOOD_LIST}
+      />
     </div>
   );
 };

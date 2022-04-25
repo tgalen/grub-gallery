@@ -1,4 +1,3 @@
-import FOOD_ITEMS from "../constants";
 import Card from "./Card";
 
 const UL_STYLE = {
@@ -9,10 +8,10 @@ const UL_STYLE = {
   marginLeft: "20%",
 };
 
-const CardContainer = ({ isEnglish }) => {
+const CardContainer = ({ isEnglish, FILTERED_FOOD_LIST }) => {
   return (
     <ul style={UL_STYLE}>
-      {FOOD_ITEMS.map((item) => {
+      {FILTERED_FOOD_LIST.map((item) => {
         return (
           <Card
             key={item.name.english}

@@ -7,12 +7,31 @@ const FILTER_BTN = {
   borderRadius: "4px",
 };
 
-const FilterButtons = () => {
+const BTN_LANGUAGE = {
+  meat: { english: "Meat", spanish: "Carne" },
+  fish: { english: "Fish", spanish: "Pescado" },
+  vegetarian: { english: "Vegetarian", spanish: "Vegetariana" },
+};
+
+const FilterButtons = ({
+  isEnglish,
+  handleMeatFilter,
+  handleFishFilter,
+  handleVegetarianFilter,
+}) => {
   return (
     <div>
-      <button style={FILTER_BTN}>Meat</button>
-      <button style={FILTER_BTN}>Fish</button>
-      <button style={FILTER_BTN}>Vegetarian</button>
+      <button onClick={handleMeatFilter} style={FILTER_BTN}>
+        {isEnglish ? BTN_LANGUAGE.meat.english : BTN_LANGUAGE.meat.spanish}
+      </button>
+      <button onClick={handleFishFilter} style={FILTER_BTN}>
+        {isEnglish ? BTN_LANGUAGE.fish.english : BTN_LANGUAGE.fish.spanish}
+      </button>
+      <button onClick={handleVegetarianFilter} style={FILTER_BTN}>
+        {isEnglish
+          ? BTN_LANGUAGE.vegetarian.english
+          : BTN_LANGUAGE.vegetarian.spanish}
+      </button>
     </div>
   );
 };
