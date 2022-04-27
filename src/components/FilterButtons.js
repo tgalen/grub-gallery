@@ -35,20 +35,30 @@ const FilterButtons = ({
     <div>
       <button
         onClick={handleMeatFilter}
-        style={typeFilter === FOOD_TYPE.MEAT ? SELECTED_FILTER_BTN : FILTER_BTN}
+        style={
+          typeFilter === FOOD_TYPE.MEAT.ENGLISH
+            ? SELECTED_FILTER_BTN
+            : FILTER_BTN
+        }
       >
         {isEnglish ? BTN_LANGUAGE.meat.english : BTN_LANGUAGE.meat.spanish}
       </button>
       <button
         onClick={handleFishFilter}
-        style={typeFilter === FOOD_TYPE.FISH ? SELECTED_FILTER_BTN : FILTER_BTN}
+        style={
+          typeFilter === FOOD_TYPE.FISH.ENGLISH
+            ? SELECTED_FILTER_BTN
+            : FILTER_BTN
+        }
       >
         {isEnglish ? BTN_LANGUAGE.fish.english : BTN_LANGUAGE.fish.spanish}
       </button>
       <button
         onClick={handleVegetarianFilter}
         style={
-          typeFilter === FOOD_TYPE.VEGETARIAN ? SELECTED_FILTER_BTN : FILTER_BTN
+          typeFilter === FOOD_TYPE.VEGETARIAN.ENGLISH
+            ? SELECTED_FILTER_BTN
+            : FILTER_BTN
         }
       >
         {isEnglish

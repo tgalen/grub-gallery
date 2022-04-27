@@ -24,10 +24,11 @@ const FILTER_BTNS_WRAPPER_STYLE = {
 
 const Body = () => {
   // current language
-  const [currentLanguage, setLanguage] = useState("English");
+  const [currentLanguage, setLanguage] = useState("ENGLISH");
+  console.log(FOOD_ITEMS[0].NAME[currentLanguage]);
 
   // filter state
-  const [typeFilter, setTypeFilter] = useState(FOOD_TYPE.ALL.ENGLISH);
+  const [typeFilter, setTypeFilter] = useState(FOOD_TYPE.ALL);
 
   // handle language slection
   const handleLanguageSelection = (language) => {
@@ -37,28 +38,28 @@ const Body = () => {
   // handle filter buttons
   const handleMeatFilter = () => {
     typeFilter === FOOD_TYPE.MEAT.ENGLISH
-      ? setTypeFilter(FOOD_TYPE.ALL.ENGLISH)
+      ? setTypeFilter(FOOD_TYPE.ALL)
       : setTypeFilter(FOOD_TYPE.MEAT.ENGLISH);
   };
 
   const handleFishFilter = () => {
     typeFilter === FOOD_TYPE.FISH.ENGLISH
-      ? setTypeFilter(FOOD_TYPE.ALL.ENGLISH)
+      ? setTypeFilter(FOOD_TYPE.ALL)
       : setTypeFilter(FOOD_TYPE.FISH.ENGLISH);
   };
 
   const handleVegetarianFilter = () => {
     typeFilter === FOOD_TYPE.VEGETARIAN.ENGLISH
-      ? setTypeFilter(FOOD_TYPE.ALL.ENGLISH)
+      ? setTypeFilter(FOOD_TYPE.ALL)
       : setTypeFilter(FOOD_TYPE.VEGETARIAN.ENGLISH);
   };
 
   // filter the complete list of food per filter buttons
   const filteredFoodList = FOOD_ITEMS.filter((item) => {
-    if (typeFilter === FOOD_TYPE.ALL.ENGLISH) {
+    if (typeFilter === FOOD_TYPE.ALL) {
       return item;
     }
-    if (item.type.english[0].includes(typeFilter)) return item;
+    if (item.TYPE.includes(typeFilter)) return item;
   });
 
   return (

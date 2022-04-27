@@ -8,17 +8,18 @@ const UL_STYLE = {
   marginLeft: "20%",
 };
 
-const CardContainer = ({ isEnglish, filteredFoodList }) => {
+const CardContainer = ({ currentLanguage, filteredFoodList }) => {
   return (
     <ul style={UL_STYLE}>
       {filteredFoodList.map((item) => {
         return (
           <Card
-            key={item.name.english}
-            img={item.image}
-            name={item.name}
-            price={item.price}
-            type={item.type}
+            key={item.NAME.ENGLISH}
+            img={item.IMAGE}
+            name={item.NAME[currentLanguage]}
+            price={item.PRICE[currentLanguage]}
+            type={item.TYPE}
+            currentLanguage={currentLanguage}
           />
         );
       })}

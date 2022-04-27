@@ -1,5 +1,5 @@
 export const FOOD_TYPE = {
-  ALL: { ENGLISH: "All" },
+  ALL: "All",
   MEAT: {
     ENGLISH: "Meat",
     SPANISH: "Carne",

@@ -9,13 +9,22 @@ const BUTTON_STYLE = {
 const LanguageToggle = ({ handleLanguageSelection }) => {
   return (
     <div>
-      <button onClick={() => handleLanguageSelection("English")}>
+      <button
+        style={BUTTON_STYLE}
+        onClick={() => handleLanguageSelection("ENGLISH")}
+      >
         English
       </button>
-      <button onClick={() => handleLanguageSelection("Spanish")}>
+      <button
+        style={BUTTON_STYLE}
+        onClick={() => handleLanguageSelection("SPANISH")}
+      >
         Español
       </button>
-      <button onClick={() => handleLanguageSelection("French")}>
+      <button
+        style={BUTTON_STYLE}
+        onClick={() => handleLanguageSelection("FRENCH")}
+      >
         Français
       </button>
     </div>

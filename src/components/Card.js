@@ -26,19 +26,21 @@ const CARD_OVERLAY = {
   // maxHeight: "100px",
 };
 
-const Card = ({ img, name, price, type }) => {
+const Card = ({ img, name, price, type, currentLanguage }) => {
   return (
     <li style={CARD_STYLE}>
       <img style={IMG_STYLE} src={img} alt={name} />
       <div style={CARD_OVERLAY}>
         <h3>{name}</h3>
         <h5>
-          {price.currency}
-          {price.value}
+          {price.CURRENCY}
+          {price.VALUE}
         </h5>
-        {type.map((descirption) => {
-          return <p>{descirption}</p>;
-        })}
+        <div>
+          {type.map((descirption) => {
+            return <p>{descirption[currentLanguage]}</p>;
+          })}
+        </div>
       </div>
     </li>
   );
