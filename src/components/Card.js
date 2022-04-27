@@ -26,6 +26,23 @@ const CARD_OVERLAY = {
   // maxHeight: "100px",
 };
 
+const TAG_CONTAINER_STYLE = {
+  // display: "inline-block",
+};
+
+const TYPE_TAG = {
+  display: "inline-block",
+  width: "15%",
+  minWidth: "fit-content",
+  backgroundColor: "lightblue",
+  fontSize: "13px",
+  margin: "3px",
+  borderStyle: "solid",
+  border: "1px solid black",
+  marginBottom: "4px",
+  borderRadius: "2px",
+};
+
 const Card = ({ img, name, price, type, currentLanguage }) => {
   return (
     <li style={CARD_STYLE}>
@@ -36,9 +53,9 @@ const Card = ({ img, name, price, type, currentLanguage }) => {
           {price.CURRENCY}
           {price.VALUE}
         </h5>
-        <div>
+        <div style={TAG_CONTAINER_STYLE}>
           {type.map((descirption) => {
-            return <p>{descirption[currentLanguage]}</p>;
+            return <div style={TYPE_TAG}>{descirption[currentLanguage]}</div>;
           })}
         </div>
       </div>

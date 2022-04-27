@@ -2,7 +2,7 @@ import { FOOD_TYPE } from "../constants";
 
 export const IMAGES = {
   chickenParm:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiR2LhzhdVVg8QRpDH2S1ErzHVELdzkLWvfA&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxzZMT0g5DhYmyy7KT7i5HhkaE-RPnzBfLJg&usqp=CAU",
   chickenMarsala:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvek1ZI3h7TpOKBLQbN17PJe93Y9svY9yMEg&usqp=CAU",
   filetMignon:
@@ -14,7 +14,7 @@ export const IMAGES = {
   mahiMahi:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-1xk5xJXn8mDCzWuB0d9PjbhEU15by-atmA&usqp=CAU",
   veggieBurger:
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu_mT7f0FBGhRvyTSmsZGRBMvqAeUB0MkbgRSDv6p6HionOdQLRv-8XjPzyQipD7rhzv8&usqp=CAU",
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvbI-u78pHvfAdcEN8AZn__aj8IvklwcGpRA&usqp=CAU",
 };
 
 export const FOOD_ITEMS = [
