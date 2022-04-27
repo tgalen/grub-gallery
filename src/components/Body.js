@@ -104,6 +104,7 @@ const Body = () => {
           handleSearchBarOnChange={handleSearchBarOnChange}
           handleClearSearch={handleClearSearch}
           handleSearchButton={handleSearchButton}
+          searchBarInput={searchBarInput}
         />
       </div>
       <div style={FILTER_BTNS_WRAPPER_STYLE}>

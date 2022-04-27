@@ -8,6 +8,7 @@ const SearchBar = ({
   handleSearchBarOnChange,
   searchBarInput,
   handleSearchButton,
+  handleClearSearch,
 }) => {
   return (
     <div>
@@ -20,7 +21,9 @@ const SearchBar = ({
       <button style={SEARCH_BTN_STYLE} onClick={handleSearchButton}>
         Search
       </button>
-      <button style={SEARCH_BTN_STYLE}>Clear Search</button>
+      <button style={SEARCH_BTN_STYLE} onClick={handleClearSearch}>
+        Clear Search
+      </button>
     </div>
   );
 };
