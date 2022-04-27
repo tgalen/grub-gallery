@@ -4,11 +4,23 @@ const SEARCH_BTN_STYLE = {
   borderRadius: "4px",
 };
 
-const SearchBar = () => {
+const SearchBar = ({
+  handleSearchBarOnChange,
+  searchBarInput,
+  handleSearchButton,
+}) => {
   return (
     <div>
-      <input type="search" />
-      <button style={SEARCH_BTN_STYLE}>Search</button>
+      <input
+        type="search"
+        placeholder="Search Grub"
+        value={searchBarInput}
+        onChange={handleSearchBarOnChange}
+      />
+      <button style={SEARCH_BTN_STYLE} onClick={handleSearchButton}>
+        Search
+      </button>
+      <button style={SEARCH_BTN_STYLE}>Clear Search</button>
     </div>
   );
 };

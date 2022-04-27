@@ -26,12 +26,30 @@ const Body = () => {
   // current language
   const [currentLanguage, setLanguage] = useState("ENGLISH");
 
-  // filter state
+  // filter button state
   const [typeFilter, setTypeFilter] = useState(FOOD_TYPE.ALL);
+
+  // search bar states
+  const [searchBarInput, setSearchBarInput] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
 
   // handle language slection
   const handleLanguageSelection = (language) => {
     setLanguage(language);
+  };
+
+  // handle search features
+  const handleSearchBarOnChange = (e) => {
+    setSearchBarInput(e.target.value.trim().toLowerCase());
+  };
+
+  const handleSearchButton = () => {
+    setSearchTerm(searchBarInput);
+  };
+
+  const handleClearSearch = () => {
+    setSearchTerm("");
+    setSearchBarInput("");
   };
 
   // handle filter buttons
@@ -55,11 +73,23 @@ const Body = () => {
 
   // filter the complete list of food per filter buttons
   const filteredFoodList = FOOD_ITEMS.filter((item) => {
-    if (typeFilter === FOOD_TYPE.ALL) {
+    if (
+      typeFilter === FOOD_TYPE.ALL &&
+      (item.NAME[currentLanguage].toLowerCase().includes(searchTerm) ||
+        searchTerm === "")
+    ) {
       return item;
     }
-    if (item.TYPE.includes(typeFilter)) return item;
+    if (
+      item.TYPE.includes(typeFilter) &&
+      (item.NAME[currentLanguage].toLowerCase().includes(searchTerm) ||
+        searchTerm === "")
+    )
+      return item;
   });
+
+  // item.NAME[currentLanguage].toLowerCase().includes(searchTerm) ||
+  //   searchTerm === "";
 
   return (
     <div>
@@ -70,7 +100,11 @@ const Body = () => {
         />
       </div>
       <div style={SEARCH_BAR_WRAPPER_STYLE}>
-        <SearchBar />
+        <SearchBar
+          handleSearchBarOnChange={handleSearchBarOnChange}
+          handleClearSearch={handleClearSearch}
+          handleSearchButton={handleSearchButton}
+        />
       </div>
       <div style={FILTER_BTNS_WRAPPER_STYLE}>
         <FilterButtons

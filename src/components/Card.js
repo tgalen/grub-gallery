@@ -41,6 +41,7 @@ const TYPE_TAG = {
   border: "1px solid black",
   marginBottom: "4px",
   borderRadius: "2px",
+  padding: "2px",
 };
 
 const Card = ({ img, name, price, type, currentLanguage }) => {
