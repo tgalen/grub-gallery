@@ -6,15 +6,19 @@ const BUTTON_STYLE = {
   borderRadius: "4px",
 };
 
-const LanguageToggle = ({ isEnglish, handleLanguageToggle }) => {
-  return isEnglish ? (
-    <button style={BUTTON_STYLE} onClick={handleLanguageToggle}>
-      Clic para Español
-    </button>
-  ) : (
-    <button style={BUTTON_STYLE} onClick={handleLanguageToggle}>
-      Click for English
-    </button>
+const LanguageToggle = ({ handleLanguageSelection }) => {
+  return (
+    <div>
+      <button onClick={() => handleLanguageSelection("English")}>
+        English
+      </button>
+      <button onClick={() => handleLanguageSelection("Spanish")}>
+        Español
+      </button>
+      <button onClick={() => handleLanguageSelection("French")}>
+        Français
+      </button>
+    </div>
   );
 };
 

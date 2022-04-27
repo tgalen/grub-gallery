@@ -32,7 +32,10 @@ const Card = ({ img, name, price, type }) => {
       <img style={IMG_STYLE} src={img} alt={name} />
       <div style={CARD_OVERLAY}>
         <h3>{name}</h3>
-        <h5>{price}</h5>
+        <h5>
+          {price.currency}
+          {price.value}
+        </h5>
         {type.map((descirption) => {
           return <p>{descirption}</p>;
         })}
