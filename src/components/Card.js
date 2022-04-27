@@ -55,7 +55,11 @@ const Card = ({ img, name, price, type, currentLanguage }) => {
         </h5>
         <div style={TAG_CONTAINER_STYLE}>
           {type.map((descirption) => {
-            return <div style={TYPE_TAG}>{descirption[currentLanguage]}</div>;
+            return (
+              <div key={Math.floor(Math.random() * 100000)} style={TYPE_TAG}>
+                {descirption[currentLanguage]}
+              </div>
+            );
           })}
         </div>
       </div>

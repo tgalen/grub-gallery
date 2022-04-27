@@ -19,13 +19,17 @@ const SELECTED_FILTER_BTN = {
 };
 
 const BTN_LANGUAGE = {
-  meat: { english: "Meat", spanish: "Carne" },
-  fish: { english: "Fish", spanish: "Pescado" },
-  vegetarian: { english: "Vegetarian", spanish: "Vegetariana" },
+  MEAT: { ENGLISH: "Meat", SPANISH: "Carne", FRENCH: "Viande" },
+  FISH: { ENGLISH: "Fish", SPANISH: "Pescado", FRENCH: "Poison" },
+  VEGETARIAN: {
+    ENGLISH: "Vegetarian",
+    SPANISH: "Vegetariana",
+    FRENCH: "Végétarien",
+  },
 };
 
 const FilterButtons = ({
-  isEnglish,
+  currentLanguage,
   handleMeatFilter,
   handleFishFilter,
   handleVegetarianFilter,
@@ -35,35 +39,23 @@ const FilterButtons = ({
     <div>
       <button
         onClick={handleMeatFilter}
-        style={
-          typeFilter === FOOD_TYPE.MEAT.ENGLISH
-            ? SELECTED_FILTER_BTN
-            : FILTER_BTN
-        }
+        style={typeFilter === FOOD_TYPE.MEAT ? SELECTED_FILTER_BTN : FILTER_BTN}
       >
-        {isEnglish ? BTN_LANGUAGE.meat.english : BTN_LANGUAGE.meat.spanish}
+        {BTN_LANGUAGE.MEAT[currentLanguage]}
       </button>
       <button
         onClick={handleFishFilter}
-        style={
-          typeFilter === FOOD_TYPE.FISH.ENGLISH
-            ? SELECTED_FILTER_BTN
-            : FILTER_BTN
-        }
+        style={typeFilter === FOOD_TYPE.FISH ? SELECTED_FILTER_BTN : FILTER_BTN}
       >
-        {isEnglish ? BTN_LANGUAGE.fish.english : BTN_LANGUAGE.fish.spanish}
+        {BTN_LANGUAGE.FISH[currentLanguage]}
       </button>
       <button
         onClick={handleVegetarianFilter}
         style={
-          typeFilter === FOOD_TYPE.VEGETARIAN.ENGLISH
-            ? SELECTED_FILTER_BTN
-            : FILTER_BTN
+          typeFilter === FOOD_TYPE.VEGETARIAN ? SELECTED_FILTER_BTN : FILTER_BTN
         }
       >
-        {isEnglish
-          ? BTN_LANGUAGE.vegetarian.english
-          : BTN_LANGUAGE.vegetarian.spanish}
+        {BTN_LANGUAGE.VEGETARIAN[currentLanguage]}
       </button>
     </div>
   );

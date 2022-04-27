@@ -112,4 +112,19 @@ export const FOOD_ITEMS = [
     TYPE: [FOOD_TYPE.VEGETARIAN],
     IMAGE: IMAGES.veggieBurger,
   },
+  {
+    NAME: {
+      ENGLISH: "Surf & Turf",
+      SPANISH: "Plato de Mar y Tierra",
+      FRENCH: "Surf et Gazon",
+    },
+    PRICE: {
+      ENGLISH: { CURRENCY: "$", VALUE: 65 },
+      SPANISH: { CURRENCY: "₱", VALUE: 1300 },
+      FRENCH: { CURRENCY: "€", VALUE: 62 },
+    },
+    TYPE: [FOOD_TYPE.BEEF, FOOD_TYPE.SHELLFISH, FOOD_TYPE.SEAFOOD],
+    IMAGE:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGH-e5zdtnb5zRywan_fVGmedNU_BGyT3-6w&usqp=CAU",
+  },
 ];
