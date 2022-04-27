@@ -25,7 +25,6 @@ const FILTER_BTNS_WRAPPER_STYLE = {
 const Body = () => {
   // current language
   const [currentLanguage, setLanguage] = useState("ENGLISH");
-  console.log(FOOD_ITEMS[0].NAME[currentLanguage]);
 
   // filter state
   const [typeFilter, setTypeFilter] = useState(FOOD_TYPE.ALL);
@@ -42,10 +41,10 @@ const Body = () => {
       : setTypeFilter(FOOD_TYPE.MEAT);
   };
 
-  const handleFishFilter = () => {
-    typeFilter === FOOD_TYPE.FISH
+  const handleSeafoodFilter = () => {
+    typeFilter === FOOD_TYPE.SEAFOOD
       ? setTypeFilter(FOOD_TYPE.ALL)
-      : setTypeFilter(FOOD_TYPE.FISH);
+      : setTypeFilter(FOOD_TYPE.SEAFOOD);
   };
 
   const handleVegetarianFilter = () => {
@@ -77,7 +76,7 @@ const Body = () => {
         <FilterButtons
           currentLanguage={currentLanguage}
           handleMeatFilter={handleMeatFilter}
-          handleFishFilter={handleFishFilter}
+          handleSeafoodFilter={handleSeafoodFilter}
           handleVegetarianFilter={handleVegetarianFilter}
           typeFilter={typeFilter}
         />

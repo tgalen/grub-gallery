@@ -21,7 +21,7 @@ const CARD_OVERLAY = {
   left: "0",
   right: "0",
   zIndex: "1",
-  borderRadius: "15px",
+  // borderRadius: "15px",
   backgroundColor: "mintCream",
   // maxHeight: "100px",
 };

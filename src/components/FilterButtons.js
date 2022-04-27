@@ -19,8 +19,16 @@ const SELECTED_FILTER_BTN = {
 };
 
 const BTN_LANGUAGE = {
-  MEAT: { ENGLISH: "Meat", SPANISH: "Carne", FRENCH: "Viande" },
-  FISH: { ENGLISH: "Fish", SPANISH: "Pescado", FRENCH: "Poison" },
+  MEAT: {
+    ENGLISH: "Meat",
+    SPANISH: "Carne",
+    FRENCH: "Viande",
+  },
+  SEAFOOD: {
+    ENGLISH: "Seafood",
+    SPANISH: "Mariscos",
+    FRENCH: "Fruit de mer",
+  },
   VEGETARIAN: {
     ENGLISH: "Vegetarian",
     SPANISH: "Vegetariana",
@@ -31,7 +39,7 @@ const BTN_LANGUAGE = {
 const FilterButtons = ({
   currentLanguage,
   handleMeatFilter,
-  handleFishFilter,
+  handleSeafoodFilter,
   handleVegetarianFilter,
   typeFilter,
 }) => {
@@ -44,10 +52,12 @@ const FilterButtons = ({
         {BTN_LANGUAGE.MEAT[currentLanguage]}
       </button>
       <button
-        onClick={handleFishFilter}
-        style={typeFilter === FOOD_TYPE.FISH ? SELECTED_FILTER_BTN : FILTER_BTN}
+        onClick={handleSeafoodFilter}
+        style={
+          typeFilter === FOOD_TYPE.SEAFOOD ? SELECTED_FILTER_BTN : FILTER_BTN
+        }
       >
-        {BTN_LANGUAGE.FISH[currentLanguage]}
+        {BTN_LANGUAGE.SEAFOOD[currentLanguage]}
       </button>
       <button
         onClick={handleVegetarianFilter}

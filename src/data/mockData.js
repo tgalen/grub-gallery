@@ -15,6 +15,8 @@ export const IMAGES = {
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-1xk5xJXn8mDCzWuB0d9PjbhEU15by-atmA&usqp=CAU",
   veggieBurger:
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvbI-u78pHvfAdcEN8AZn__aj8IvklwcGpRA&usqp=CAU",
+  surfTurf:
+    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGH-e5zdtnb5zRywan_fVGmedNU_BGyT3-6w&usqp=CAU",
 };
 
 export const FOOD_ITEMS = [
@@ -22,7 +24,7 @@ export const FOOD_ITEMS = [
     NAME: {
       ENGLISH: "Chicken Parmagiana",
       SPANISH: "Pollo Parmesano",
-      FRENCH: "look up french",
+      FRENCH: "Poulet au Parmesan",
     },
     PRICE: {
       ENGLISH: { CURRENCY: "$", VALUE: 20 },
@@ -36,7 +38,7 @@ export const FOOD_ITEMS = [
     NAME: {
       ENGLISH: "Chicken Marsala",
       SPANISH: "Pollo Marsalla",
-      FRENCH: "look up french",
+      FRENCH: "Poulet Marsala",
     },
     PRICE: {
       ENGLISH: { CURRENCY: "$", VALUE: 20 },
@@ -50,7 +52,7 @@ export const FOOD_ITEMS = [
     NAME: {
       ENGLISH: "Filet Mignon",
       SPANISH: "Filete Mignon",
-      FRENCH: "look up french",
+      FRENCH: "Filet Mignon",
     },
     PRICE: {
       ENGLISH: { CURRENCY: "$", VALUE: 40 },
@@ -64,7 +66,7 @@ export const FOOD_ITEMS = [
     NAME: {
       ENGLISH: "Salmon",
       SPANISH: "Salmon",
-      FRENCH: "look up french",
+      FRENCH: "Saumon",
     },
     PRICE: {
       ENGLISH: { CURRENCY: "$", VALUE: 25 },
@@ -75,7 +77,11 @@ export const FOOD_ITEMS = [
     IMAGE: IMAGES.salmon,
   },
   {
-    NAME: { ENGLISH: "Lobster", SPANISH: "Langosta", FRENCH: "look up french" },
+    NAME: {
+      ENGLISH: "Lobster",
+      SPANISH: "Langosta",
+      FRENCH: "Homard",
+    },
     PRICE: {
       ENGLISH: { CURRENCY: "$", VALUE: 50 },
       SPANISH: { CURRENCY: "₱", VALUE: 1000 },
@@ -88,7 +94,7 @@ export const FOOD_ITEMS = [
     NAME: {
       ENGLISH: "Mahi Mahi",
       SPANISH: "Trabajo Trabajo",
-      FRENCH: "look up french",
+      FRENCH: "Travail Travail",
     },
     PRICE: {
       ENGLISH: { CURRENCY: "$", VALUE: 25 },
@@ -102,7 +108,7 @@ export const FOOD_ITEMS = [
     NAME: {
       ENGLISH: "Veggie Burger",
       SPANISH: "Hamburguesa Vegetariana",
-      FRENCH: "look up french",
+      FRENCH: "Burger Végétarien",
     },
     PRICE: {
       ENGLISH: { CURRENCY: "$", VALUE: 15 },
@@ -123,8 +129,12 @@ export const FOOD_ITEMS = [
       SPANISH: { CURRENCY: "₱", VALUE: 1300 },
       FRENCH: { CURRENCY: "€", VALUE: 62 },
     },
-    TYPE: [FOOD_TYPE.BEEF, FOOD_TYPE.SHELLFISH, FOOD_TYPE.SEAFOOD],
-    IMAGE:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGH-e5zdtnb5zRywan_fVGmedNU_BGyT3-6w&usqp=CAU",
+    TYPE: [
+      FOOD_TYPE.BEEF,
+      FOOD_TYPE.SHELLFISH,
+      FOOD_TYPE.SEAFOOD,
+      FOOD_TYPE.MEAT,
+    ],
+    IMAGE: IMAGES.surfTurf,
   },
 ];
