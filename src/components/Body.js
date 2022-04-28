@@ -73,23 +73,15 @@ const Body = () => {
 
   // filter the complete list of food per filter buttons
   const filteredFoodList = FOOD_ITEMS.filter((item) => {
-    if (
-      typeFilter === FOOD_TYPE.ALL &&
-      (item.name[currentLanguage].toLowerCase().includes(searchTerm) ||
-        searchTerm === "")
-    ) {
-      return item;
-    }
-    if (
-      item.type.includes(typeFilter) &&
-      (item.name[currentLanguage].toLowerCase().includes(searchTerm) ||
-        searchTerm === "")
-    )
-      return item;
-  });
+    const containsFilters =
+      typeFilter === FOOD_TYPE.ALL || item.type.includes(typeFilter);
 
-  // item.name[currentLanguage].toLowerCase().includes(searchTerm) ||
-  //   searchTerm === "";
+    const containsSearchTerm =
+      searchTerm === "" ||
+      item.name[currentLanguage].toLowerCase().includes(searchTerm);
+
+    return containsFilters && containsSearchTerm;
+  });
 
   return (
     <div>
