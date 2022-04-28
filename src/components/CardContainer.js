@@ -14,11 +14,11 @@ const CardContainer = ({ currentLanguage, filteredFoodList }) => {
       {filteredFoodList.map((item) => {
         return (
           <Card
-            key={item.NAME.ENGLISH}
-            img={item.IMAGE}
-            name={item.NAME[currentLanguage]}
-            price={item.PRICE[currentLanguage]}
-            type={item.TYPE}
+            key={item.name.english}
+            img={item.image}
+            name={item.name[currentLanguage]}
+            price={item.price[currentLanguage]}
+            type={item.type}
             currentLanguage={currentLanguage}
           />
         );

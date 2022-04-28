@@ -21,120 +21,120 @@ export const IMAGES = {
 
 export const FOOD_ITEMS = [
   {
-    NAME: {
-      ENGLISH: "Chicken Parmagiana",
-      SPANISH: "Pollo Parmesano",
-      FRENCH: "Poulet au Parmesan",
+    name: {
+      english: "Chicken Parmagiana",
+      spanish: "Pollo Parmesano",
+      french: "Poulet au Parmesan",
     },
-    PRICE: {
-      ENGLISH: { CURRENCY: "$", VALUE: 20 },
-      SPANISH: { CURRENCY: "₱", VALUE: 400 },
-      FRENCH: { CURRENCY: "€", VALUE: 20 },
+    price: {
+      english: { currency: "$", value: 20 },
+      spanish: { currency: "₱", value: 400 },
+      french: { currency: "€", value: 20 },
     },
-    TYPE: [FOOD_TYPE.MEAT, FOOD_TYPE.CHICKEN, FOOD_TYPE.ITALIAN],
-    IMAGE: IMAGES.chickenParm,
+    type: [FOOD_TYPE.MEAT, FOOD_TYPE.CHICKEN, FOOD_TYPE.ITALIAN],
+    image: IMAGES.chickenParm,
   },
   {
-    NAME: {
-      ENGLISH: "Chicken Marsala",
-      SPANISH: "Pollo Marsalla",
-      FRENCH: "Poulet Marsala",
+    name: {
+      english: "Chicken Marsala",
+      spanish: "Pollo Marsalla",
+      french: "Poulet Marsala",
     },
-    PRICE: {
-      ENGLISH: { CURRENCY: "$", VALUE: 20 },
-      SPANISH: { CURRENCY: "₱", VALUE: 400 },
-      FRENCH: { CURRENCY: "€", VALUE: 20 },
+    price: {
+      english: { currency: "$", value: 20 },
+      spanish: { currency: "₱", value: 400 },
+      french: { currency: "€", value: 20 },
     },
-    TYPE: [FOOD_TYPE.MEAT, FOOD_TYPE.CHICKEN, FOOD_TYPE.ITALIAN],
-    IMAGE: IMAGES.chickenMarsala,
+    type: [FOOD_TYPE.MEAT, FOOD_TYPE.CHICKEN, FOOD_TYPE.ITALIAN],
+    image: IMAGES.chickenMarsala,
   },
   {
-    NAME: {
-      ENGLISH: "Filet Mignon",
-      SPANISH: "Filete Mignon",
-      FRENCH: "Filet Mignon",
+    name: {
+      english: "Filet Mignon",
+      spanish: "Filete Mignon",
+      french: "Filet Mignon",
     },
-    PRICE: {
-      ENGLISH: { CURRENCY: "$", VALUE: 40 },
-      SPANISH: { CURRENCY: "₱", VALUE: 800 },
-      FRENCH: { CURRENCY: "€", VALUE: 38 },
+    price: {
+      english: { currency: "$", value: 40 },
+      spanish: { currency: "₱", value: 800 },
+      french: { currency: "€", value: 38 },
     },
-    TYPE: [FOOD_TYPE.MEAT, FOOD_TYPE.BEEF],
-    IMAGE: IMAGES.filetMignon,
+    type: [FOOD_TYPE.MEAT, FOOD_TYPE.BEEF],
+    image: IMAGES.filetMignon,
   },
   {
-    NAME: {
-      ENGLISH: "Salmon",
-      SPANISH: "Salmon",
-      FRENCH: "Saumon",
+    name: {
+      english: "Salmon",
+      spanish: "Salmon",
+      french: "Saumon",
     },
-    PRICE: {
-      ENGLISH: { CURRENCY: "$", VALUE: 25 },
-      SPANISH: { CURRENCY: "₱", VALUE: 500 },
-      FRENCH: { CURRENCY: "€", VALUE: 25 },
+    price: {
+      english: { currency: "$", value: 25 },
+      spanish: { currency: "₱", value: 500 },
+      french: { currency: "€", value: 25 },
     },
-    TYPE: [FOOD_TYPE.FISH, FOOD_TYPE.SEAFOOD],
-    IMAGE: IMAGES.salmon,
+    type: [FOOD_TYPE.FISH, FOOD_TYPE.SEAFOOD],
+    image: IMAGES.salmon,
   },
   {
-    NAME: {
-      ENGLISH: "Lobster",
-      SPANISH: "Langosta",
-      FRENCH: "Homard",
+    name: {
+      english: "Lobster",
+      spanish: "Langosta",
+      french: "Homard",
     },
-    PRICE: {
-      ENGLISH: { CURRENCY: "$", VALUE: 50 },
-      SPANISH: { CURRENCY: "₱", VALUE: 1000 },
-      FRENCH: { CURRENCY: "€", VALUE: 43 },
+    price: {
+      english: { currency: "$", value: 50 },
+      spanish: { currency: "₱", value: 1000 },
+      french: { currency: "€", value: 43 },
     },
-    TYPE: [FOOD_TYPE.SEAFOOD, FOOD_TYPE.SHELLFISH],
-    IMAGE: IMAGES.lobster,
+    type: [FOOD_TYPE.SEAFOOD, FOOD_TYPE.SHELLFISH],
+    image: IMAGES.lobster,
   },
   {
-    NAME: {
-      ENGLISH: "Mahi Mahi",
-      SPANISH: "Trabajo Trabajo",
-      FRENCH: "Travail Travail",
+    name: {
+      english: "Mahi Mahi",
+      spanish: "Trabajo Trabajo",
+      french: "Travail Travail",
     },
-    PRICE: {
-      ENGLISH: { CURRENCY: "$", VALUE: 25 },
-      SPANISH: { CURRENCY: "₱", VALUE: 500 },
-      FRENCH: { CURRENCY: "€", VALUE: 25 },
+    price: {
+      english: { currency: "$", value: 25 },
+      spanish: { currency: "₱", value: 500 },
+      french: { currency: "€", value: 25 },
     },
-    TYPE: [FOOD_TYPE.FISH, FOOD_TYPE.SEAFOOD],
-    IMAGE: IMAGES.mahiMahi,
+    type: [FOOD_TYPE.FISH, FOOD_TYPE.SEAFOOD],
+    image: IMAGES.mahiMahi,
   },
   {
-    NAME: {
-      ENGLISH: "Veggie Burger",
-      SPANISH: "Hamburguesa Vegetariana",
-      FRENCH: "Burger Végétarien",
+    name: {
+      english: "Veggie Burger",
+      spanish: "Hamburguesa Vegetariana",
+      french: "Burger Végétarien",
     },
-    PRICE: {
-      ENGLISH: { CURRENCY: "$", VALUE: 15 },
-      SPANISH: { CURRENCY: "₱", VALUE: 300 },
-      FRENCH: { CURRENCY: "€", VALUE: 15 },
+    price: {
+      english: { currency: "$", value: 15 },
+      spanish: { currency: "₱", value: 300 },
+      french: { currency: "€", value: 15 },
     },
-    TYPE: [FOOD_TYPE.VEGETARIAN],
-    IMAGE: IMAGES.veggieBurger,
+    type: [FOOD_TYPE.VEGETARIAN],
+    image: IMAGES.veggieBurger,
   },
   {
-    NAME: {
-      ENGLISH: "Surf & Turf",
-      SPANISH: "Plato de Mar y Tierra",
-      FRENCH: "Surf et Gazon",
+    name: {
+      english: "Surf & Turf",
+      spanish: "Plato de Mar y Tierra",
+      french: "Surf et Gazon",
     },
-    PRICE: {
-      ENGLISH: { CURRENCY: "$", VALUE: 65 },
-      SPANISH: { CURRENCY: "₱", VALUE: 1300 },
-      FRENCH: { CURRENCY: "€", VALUE: 62 },
+    price: {
+      english: { currency: "$", value: 65 },
+      spanish: { currency: "₱", value: 1300 },
+      french: { currency: "€", value: 62 },
     },
-    TYPE: [
+    type: [
       FOOD_TYPE.BEEF,
       FOOD_TYPE.SHELLFISH,
       FOOD_TYPE.SEAFOOD,
       FOOD_TYPE.MEAT,
     ],
-    IMAGE: IMAGES.surfTurf,
+    image: IMAGES.surfTurf,
   },
 ];

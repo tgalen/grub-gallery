@@ -20,19 +20,19 @@ const SELECTED_FILTER_BTN = {
 
 const BTN_LANGUAGE = {
   MEAT: {
-    ENGLISH: "Meat",
-    SPANISH: "Carne",
-    FRENCH: "Viande",
+    english: "Meat",
+    spanish: "Carne",
+    french: "Viande",
   },
   SEAFOOD: {
-    ENGLISH: "Seafood",
-    SPANISH: "Mariscos",
-    FRENCH: "Fruit de mer",
+    english: "Seafood",
+    spanish: "Mariscos",
+    french: "Fruit de mer",
   },
   VEGETARIAN: {
-    ENGLISH: "Vegetarian",
-    SPANISH: "Vegetariana",
-    FRENCH: "Végétarien",
+    english: "Vegetarian",
+    spanish: "Vegetariana",
+    french: "Végétarien",
   },
 };
 

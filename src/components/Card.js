@@ -51,8 +51,8 @@ const Card = ({ img, name, price, type, currentLanguage }) => {
       <div style={CARD_OVERLAY}>
         <h3>{name}</h3>
         <h5>
-          {price.CURRENCY}
-          {price.VALUE}
+          {price.currency}
+          {price.value}
         </h5>
         <div style={TAG_CONTAINER_STYLE}>
           {type.map((descirption) => {

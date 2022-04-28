@@ -24,7 +24,7 @@ const FILTER_BTNS_WRAPPER_STYLE = {
 
 const Body = () => {
   // current language
-  const [currentLanguage, setLanguage] = useState("ENGLISH");
+  const [currentLanguage, setLanguage] = useState("english");
 
   // filter button state
   const [typeFilter, setTypeFilter] = useState(FOOD_TYPE.ALL);
@@ -75,20 +75,20 @@ const Body = () => {
   const filteredFoodList = FOOD_ITEMS.filter((item) => {
     if (
       typeFilter === FOOD_TYPE.ALL &&
-      (item.NAME[currentLanguage].toLowerCase().includes(searchTerm) ||
+      (item.name[currentLanguage].toLowerCase().includes(searchTerm) ||
         searchTerm === "")
     ) {
       return item;
     }
     if (
-      item.TYPE.includes(typeFilter) &&
-      (item.NAME[currentLanguage].toLowerCase().includes(searchTerm) ||
+      item.type.includes(typeFilter) &&
+      (item.name[currentLanguage].toLowerCase().includes(searchTerm) ||
         searchTerm === "")
     )
       return item;
   });
 
-  // item.NAME[currentLanguage].toLowerCase().includes(searchTerm) ||
+  // item.name[currentLanguage].toLowerCase().includes(searchTerm) ||
   //   searchTerm === "";
 
   return (
