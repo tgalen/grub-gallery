@@ -2,6 +2,7 @@ const SEARCH_BTN_STYLE = {
   backgroundColor: "black",
   color: "white",
   borderRadius: "4px",
+  margin: "2px",
 };
 
 const SearchBar = ({

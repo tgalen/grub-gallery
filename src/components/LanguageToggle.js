@@ -4,6 +4,7 @@ const BUTTON_STYLE = {
   backgroundColor: "black",
   color: "white",
   borderRadius: "4px",
+  margin: "5px",
 };
 
 const LanguageToggle = ({ handleLanguageSelection }) => {

@@ -7,7 +7,7 @@ const CARD_STYLE = {
   overflow: "hidden",
   borderRadius: "15px",
   margin: "0.5%",
-  borderStyle: "solid",
+  border: "0.5px solid black",
 };
 
 const IMG_STYLE = {
