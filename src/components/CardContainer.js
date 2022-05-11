@@ -20,11 +20,12 @@ const CardContainer = ({ currentLanguage, filteredFoodList }) => {
   return filteredFoodList ? (
     <ul style={UL_STYLE}>
       {filteredFoodList.map((item) => {
+        const linkItemInfo = { ...item, language: currentLanguage };
         return (
           <Link
             key={item.name.english}
             to={`${item.name.english}`}
-            state={item}
+            state={linkItemInfo}
           >
             <Card item={item} currentLanguage={currentLanguage} />
           </Link>
