@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SearchBar from "./SearchBar";
 import FilterButtons from "./FilterButtons";
 import CardContainer from "./CardContainer";
 import LanguageToggle from "./LanguageToggle";
 import { FOOD_TYPE } from "../constants";
-import { FOOD_ITEMS } from "../data/mockData";
+import { fetchFood } from "../api/mockApi";
 
 const LANGUAGE_BTN_WRAPPER_STYLE = {
   margin: "auto",
@@ -22,7 +22,9 @@ const FILTER_BTNS_WRAPPER_STYLE = {
   marginTop: "20px",
 };
 
-const Body = () => {
+const FoodList = () => {
+  const [foodItems, setFoodItems] = useState(null);
+
   // current language
   const [currentLanguage, setLanguage] = useState("english");
 
@@ -32,6 +34,10 @@ const Body = () => {
   // search bar states
   const [searchBarInput, setSearchBarInput] = useState("");
   const [searchTerm, setSearchTerm] = useState("");
+
+  useEffect(() => {
+    fetchFood().then((data) => setFoodItems(data));
+  }, []);
 
   // handle language slection
   const handleLanguageSelection = (language) => {
@@ -72,17 +78,18 @@ const Body = () => {
   };
 
   // filter the complete list of food per filter buttons
-  const filteredFoodList = FOOD_ITEMS.filter((item) => {
-    const containsFilters =
-      typeFilter === FOOD_TYPE.ALL || item.type.includes(typeFilter);
+  const filteredFoodList =
+    foodItems &&
+    foodItems.filter((item) => {
+      const containsFilters =
+        typeFilter === FOOD_TYPE.ALL || item.type.includes(typeFilter);
 
-    const containsSearchTerm =
-      searchTerm === "" ||
-      item.name[currentLanguage].toLowerCase().includes(searchTerm);
+      const containsSearchTerm =
+        searchTerm === "" ||
+        item.name[currentLanguage].toLowerCase().includes(searchTerm);
 
-    return containsFilters && containsSearchTerm;
-  });
-
+      return containsFilters && containsSearchTerm;
+    });
   return (
     <div>
       <div style={LANGUAGE_BTN_WRAPPER_STYLE}>
@@ -116,4 +123,4 @@ const Body = () => {
   );
 };
 
-export default Body;
+export default FoodList;

@@ -1,17 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import Body from "./components/Body";
+import FoodList from "./components/FoodList";
 import About from "./components/About";
+import FoodItemDetails from "./components/FoodItemDetails";
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Header />
-        {/* <Body /> */}
+        {/* <FoodList /> */}
         <Routes>
-          <Route path="/" element={<Body />} />
+          <Route path="/" element={<FoodList />} />
           <Route path="/about" element={<About />} />
+          <Route path="/:id" element={<FoodItemDetails />} />
         </Routes>
       </BrowserRouter>
     </div>

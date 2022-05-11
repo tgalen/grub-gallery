@@ -8,6 +8,8 @@ const CARD_STYLE = {
   borderRadius: "15px",
   margin: "0.5%",
   border: "0.5px solid black",
+  textDecoration: "none",
+  color: "black",
 };
 
 const IMG_STYLE = {
@@ -44,18 +46,22 @@ const TYPE_TAG = {
   padding: "2px",
 };
 
-const Card = ({ img, name, price, type, currentLanguage }) => {
+const Card = ({ item, currentLanguage }) => {
   return (
     <li style={CARD_STYLE}>
-      <img style={IMG_STYLE} src={img} alt={name} />
+      <img
+        style={IMG_STYLE}
+        src={item.image}
+        alt={item.name[currentLanguage]}
+      />
       <div style={CARD_OVERLAY}>
-        <h3>{name}</h3>
+        <h3>{item.name[currentLanguage]}</h3>
         <h5>
-          {price.currency}
-          {price.value}
+          {item.price[currentLanguage].currency}
+          {item.price[currentLanguage].value}
         </h5>
         <div style={TAG_CONTAINER_STYLE}>
-          {type.map((descirption) => {
+          {item.type.map((descirption) => {
             return (
               <div key={Math.floor(Math.random() * 100000)} style={TYPE_TAG}>
                 {descirption[currentLanguage]}
@@ -67,5 +73,10 @@ const Card = ({ img, name, price, type, currentLanguage }) => {
     </li>
   );
 };
+
+// img={item.image}
+// name={item.name[currentLanguage]}
+// price={item.price[currentLanguage]}
+// type={item.type}
 
 export default Card;
